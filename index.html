@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Kumar | Modern Insurance Professional</title>
+    <meta name="description" content="Deepak Kumar - Senior Associate Partner at Kotak Mahindra Life Insurance. Modern insurance solutions and business opportunities.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --secondary: #f59e0b;
+            --accent: #06b6d4;
+            --dark: #1f2937;
+            --light: #f8fafc;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Modern Glassmorphism Navigation */
+        .modern-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .modern-nav.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Hero Section with Modern Design */
+        .hero-modern {
+            min-height: 100vh;
+            background: var(--gradient-1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1" /></radialGradient></defs><circle cx="200" cy="300" r="100" fill="url(%23grad1)"><animateTransform attributeName="transform" attributeType="XML" type="translate" values="0 0; 100 -50; 0 0" dur="10s" repeatCount="indefinite"/></circle><circle cx="800" cy="700" r="150" fill="url(%23grad1)"><animateTransform attributeName="transform" attributeType="XML" type="translate" values="0 0; -150 50; 0 0" dur="15s" repeatCount="indefinite"/></circle></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+        }
+        
+        /* Modern Card Design */
+        .modern-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+        
+        .modern-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Enhanced Button Styles */
+        .btn-modern {
+            position: relative;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-3);
+            color: white;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(79, 172, 254, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Floating Action Button */
+        .fab-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            animation: pulse-fab 2s infinite;
+        }
+        
+        .fab-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+        }
+        
+        @keyframes pulse-fab {
+            0% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
+            50% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+            100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); }
+        }
+        
+        /* Modern Gallery */
+        .gallery-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            padding: 24px 0;
+        }
+        
+        .gallery-item-modern {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item-modern:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item-modern img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .gallery-item-modern:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay-modern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .gallery-item-modern:hover .gallery-overlay-modern {
+            opacity: 1;
+        }
+        
+        /* Modern Stats */
+        .stat-modern {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--gradient-4);
+            border-radius: 20px;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .stat-modern:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number-modern {
+            font-size: 3.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label-modern {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero-modern {
+                min-height: 100vh;
+                padding: 80px 0 40px;
+            }
+            
+            .hero-title-modern {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle-modern {
+                font-size: 1.1rem !important;
+                line-height: 1.5;
+            }
+            
+            .btn-modern {
+                padding: 14px 28px;
+                font-size: 0.9rem;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 12px;
+            }
+            
+            .gallery-modern {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .fab-whatsapp {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 1.5rem;
+            }
+            
+            .modern-card {
+                margin: 0 8px;
+            }
+            
+            .stat-modern {
+                padding: 20px 15px;
+            }
+            
+            .stat-number-modern {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-title-modern {
+                font-size: 2rem !important;
+            }
+            
+            .hero-subtitle-modern {
+                font-size: 1rem !important;
+            }
+            
+            .gallery-modern {
+                padding: 16px 8px;
+            }
+        }
+        
+        /* Section Spacing */
+        .section-modern {
+            padding: 80px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .section-modern {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Modern Form Styling */
+        .form-modern input,
+        .form-modern select,
+        .form-modern textarea {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 16px 20px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-modern input::placeholder,
+        .form-modern textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .form-modern input:focus,
+        .form-modern select:focus,
+        .form-modern textarea:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Typography Improvements */
+        .heading-modern {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .subheading-modern {
+            font-weight: 500;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* Loading Animation */
+        .loading-dots {
+            display: inline-block;
+        }
+        
+        .loading-dots::after {
+            content: '';
+            animation: dots 2s infinite;
+        }
+        
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+        
+        /* PDF Optimization */
+        @media print {
+            .modern-nav { position: static !important; }
+            .fab-whatsapp { display: none !important; }
+            * { animation: none !important; }
+            .hero-modern { min-height: 60vh !important; }
+            .section-modern { padding: 40px 0 !important; }
+        }
+        
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .modern-card:hover {
+                transform: none;
+            }
+            
+            .btn-modern:hover {
+                transform: none;
+            }
+            
+            .gallery-item-modern:hover {
+                transform: none;
+            }
+            
+            .gallery-item-modern:hover .gallery-overlay-modern {
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Modern Navigation -->
+    <nav class="modern-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        DK
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Deepak Kumar</h1>
+                        <p class="text-sm text-gray-600">Insurance Professional</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Services</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Gallery</a>
+                    <a href="#team" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Join Team</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="space-y-2">
+                    <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">About</a>
+                    <a href="#services" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Services</a>
+                    <a href="#gallery" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Gallery</a>
+                    <a href="#team" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Join Team</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Modern Hero Section -->
+        <section id="home" class="hero-modern">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center text-white max-w-4xl mx-auto">
+                    <h2 class="hero-title-modern text-5xl md:text-6xl font-800 mb-6 heading-modern fade-in-up">
+                        Secure Your Future with
+                        <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Modern Insurance</span>
+                    </h2>
+                    <p class="hero-subtitle-modern text-xl md:text-2xl mb-8 subheading-modern fade-in-up" style="animation-delay: 0.2s;">
+                        Transform your financial security with Kotak Mahindra Life Insurance. Expert guidance, personalized solutions, and unwavering support for your family's future.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up" style="animation-delay: 0.4s;">
+                        <button class="btn-modern btn-primary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-phone"></i>
+                            Get Free Consultation
+                        </button>
+                        <button class="btn-modern btn-secondary" onclick="scrollToSection('team')">
+                            <i class="fas fa-users"></i>
+                            Join My Team
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern About Section -->
+        <section id="about" class="section-modern bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 heading-modern">About Me</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto subheading-modern">
+                        Dedicated insurance professional with a passion for securing families' financial futures through innovative solutions.
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 fade-in-left">
+                        <div class="relative">
+                            <img src="photos/WhatsApp Image 2025-07-23 at 22.12.30_f5db7fb5.jpg" 
+                                 alt="Deepak Kumar - Professional Photo" 
+                                 class="rounded-3xl shadow-2xl w-full h-auto">
+                            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white">
+                                <i class="fas fa-award text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 fade-in-right">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-6 heading-modern">
+                            Senior Associate Partner<br>
+                            <span class="text-blue-600">Kotak Mahindra Life Insurance</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            With over 14 years of experience in the insurance industry, I've helped hundreds of families secure their financial future through comprehensive protection plans and strategic investment solutions.
+                        </p>
+                        <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                            My approach combines deep product knowledge with genuine care for my clients' well-being, ensuring every recommendation is tailored to their unique needs and circumstances.
+                        </p>
+                        
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="stat-modern">
+                                <span class="stat-number-modern">14+</span>
+                                <span class="stat-label-modern">Years</span>
+                            </div>
+                            <div class="stat-modern">
+                                <span class="stat-number-modern">700+</span>
+                                <span class="stat-label-modern">Clients</span>
+                            </div>
+                            <div class="stat-modern">
+                                <span class="stat-number-modern">80+</span>
+                                <span class="stat-label-modern">Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Services Section -->
+        <section id="services" class="section-modern" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 heading-modern">Our Services</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto subheading-modern">
+                        Comprehensive insurance solutions designed to protect and grow your wealth.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="modern-card p-8 fade-in-up">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Life Insurance</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Comprehensive life coverage that ensures your family's financial security with term plans, whole life, and endowment policies.
+                        </p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors" onclick="scrollToSection('contact')">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Health Insurance</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Protect against rising medical costs with our comprehensive health insurance plans covering hospitalization and critical illness.
+                        </p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors" onclick="scrollToSection('contact')">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Child Education</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Secure your child's educational future with specially designed savings plans that grow systematically over time.
+                        </p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors" onclick="scrollToSection('contact')">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Retirement Plans</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Build substantial retirement corpus with pension plans ensuring financial independence during your golden years.
+                        </p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors" onclick="scrollToSection('contact')">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Investment Plans</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Grow wealth systematically with ULIPs and investment-linked insurance products offering market-linked returns.
+                        </p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors" onclick="scrollToSection('contact')">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 fade-in-up" style="animation-delay: 0.5s;">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Business Partnership</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Join my team as an insurance advisor and build a rewarding career while helping others secure their future.
+                        </p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors" onclick="scrollToSection('team')">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Gallery Section -->
+        <section id="gallery" class="section-modern bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 heading-modern">Gallery</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto subheading-modern">
+                        Moments from our journey, achievements, and successful collaborations.
+                    </p>
+                </div>
+                
+                <div class="gallery-modern">
+                    <div class="gallery-item-modern fade-in-up">
+                        <img src="photos/WhatsApp Image 2025-07-23 at 21.54.29_7aa3ca21.jpg" alt="Award Ceremony">
+                        <div class="gallery-overlay-modern">
+                            <h3 class="text-2xl font-bold mb-3">Journey
+</h3>
+                            <p class="text-lg opacity-90">Work hard, travel far, live fully.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item-modern fade-in-up" style="animation-delay: 0.1s;">
+                        <img src="photos/WhatsApp Image 2025-07-23 at 21.57.10_a52950b6.jpg" alt="Team Meeting">
+                        <div class="gallery-overlay-modern">
+                            <h3 class="text-2xl font-bold mb-3">Balance
+</h3>
+                            <p class="text-lg opacity-90">Build your career while enjoying the ride.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item-modern fade-in-up" style="animation-delay: 0.2s;">
+                        <img src="photos/WhatsApp Image 2025-07-23 at 21.57.11_ab9f4b5f.jpg" alt="Client Consultation">
+                        <div class="gallery-overlay-modern">
+                            <h3 class="text-2xl font-bold mb-3">Reward
+</h3>
+                            <p class="text-lg opacity-90">Hard work pays in memories, not just money.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item-modern fade-in-up" style="animation-delay: 0.3s;">
+                        <img src="photos/WhatsApp Image 2025-07-23 at 21.57.11_c804317f.jpg" alt="Training Session">
+                        <div class="gallery-overlay-modern">
+                            <h3 class="text-2xl font-bold mb-3">Success
+</h3>
+                            <p class="text-lg opacity-90">Growth deserves celebration too.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item-modern fade-in-up" style="animation-delay: 0.4s;">
+                        <img src="photos/WhatsApp Image 2025-07-23 at 21.57.11_e39eb315.jpg" alt="Business Success">
+                        <div class="gallery-overlay-modern">
+                            <h3 class="text-2xl font-bold mb-3">Joy</h3>
+                            <p class="text-lg opacity-90">Achieve with a smile, not stress.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item-modern fade-in-up" style="animation-delay: 0.5s;">
+                        <img src="photos/WhatsApp Image 2025-07-23 at 22.12.29_29e19393.jpg" alt="Leadership Excellence">
+                        <div class="gallery-overlay-modern">
+                            <h3 class="text-2xl font-bold mb-3">Adventure</h3>
+                            <p class="text-lg opacity-90">Hit targets, pack bags!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Team Section -->
+        <section id="team" class="section-modern" style="background: var(--gradient-2);">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 heading-modern">Join My Team</h2>
+                    <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+                    <p class="text-xl text-white opacity-90 max-w-3xl mx-auto subheading-modern">
+                        Build a rewarding career in insurance with comprehensive training and ongoing support.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="modern-card p-8 text-center fade-in-up">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Insurance Advisor</h3>
+                        <p class="text-white opacity-80 mb-6">Entry-level position with comprehensive training</p>
+                        <button class="btn-modern btn-secondary w-full" onclick="scrollToSection('contact')">
+                            Apply Now
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 text-center fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Senior Advisor</h3>
+                        <p class="text-white opacity-80 mb-6">For experienced professionals (2+ years)</p>
+                        <button class="btn-modern btn-secondary w-full" onclick="scrollToSection('contact')">
+                            Apply Now
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 text-center fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Team Leader</h3>
+                        <p class="text-white opacity-80 mb-6">Leadership role with team management</p>
+                        <button class="btn-modern btn-secondary w-full" onclick="scrollToSection('contact')">
+                            Apply Now
+                        </button>
+                    </div>
+                    
+                    <div class="modern-card p-8 text-center fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Business Partner</h3>
+                        <p class="text-white opacity-80 mb-6">Entrepreneurial partnership opportunity</p>
+                        <button class="btn-modern btn-secondary w-full" onclick="scrollToSection('contact')">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Contact Section -->
+        <section id="contact" class="section-modern" style="background: var(--gradient-1);">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 heading-modern">Get In Touch</h2>
+                    <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+                    <p class="text-xl text-white opacity-90 max-w-3xl mx-auto subheading-modern">
+                        Ready to secure your future? Let's discuss your insurance needs today.
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="fade-in-left">
+                        <h3 class="text-3xl font-bold text-white mb-8 heading-modern">Let's Connect</h3>
+                        <div class="space-y-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white text-xl">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-white mb-2"> Location</h4>
+                                    <p class="text-white opacity-80 text-lg">Kotak Mahindra Life Insurance<br>Haryana | Punjab | Delhi | Chandigarh</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white text-xl">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-white mb-2">Phone</h4>
+                                    <a href="tel:+919812551751" class="text-white opacity-80 text-lg hover:opacity-100 transition-opacity">+91 9812551751</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white text-xl">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-white mb-2">Email</h4>
+                                    <a href="mailto:deepak.kumar@kotaklife.com" class="text-white opacity-80 text-lg hover:opacity-100 transition-opacity">deepaklib81@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h4 class="text-xl font-semibold text-white mb-6">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.facebook.com/share/1F79irGSQY/" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/deepak.kumar.insan?igsh=djU2MHBvNGFxdTRw" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modern-card p-8 fade-in-right">
+                        <form id="contact-form" class="form-modern space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="0ace71ed-1fdf-4b28-866f-bc9d2ff18dcf">
+                            <h3 class="text-2xl font-bold text-white mb-6 heading-modern">Send Message</h3>
+                           
+                            <div>
+                                <input type="text" id="name" name="name" placeholder="Your Full Name" required 
+                                       class="w-full">
+                                <div id="name-error" class="text-red-300 text-sm mt-2 hidden"></div>
+                            </div>
+                            
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="Your Email Address" required 
+                                       class="w-full">
+                                <div id="email-error" class="text-red-300 text-sm mt-2 hidden"></div>
+                            </div>
+                            
+                            <div>
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required 
+                                       class="w-full">
+                                <div id="phone-error" class="text-red-300 text-sm mt-2 hidden"></div>
+                            </div>
+                            
+                            <div>
+                                <select id="interest" name="interest" required class="w-full text-gray-800">
+                                    <option value="">Select your interest</option>
+                                    <option value="life-insurance">Life Insurance</option>
+                                    <option value="health-insurance">Health Insurance</option>
+                                    <option value="investment">Investment Plans</option>
+                                    <option value="career">Career Opportunity</option>
+                                    <option value="collaboration">Business Collaboration</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div id="interest-error" class="text-red-300 text-sm mt-2 hidden"></div>
+                            </div>
+                            
+                            <div>
+                                <textarea id="message" name="message" rows="4" placeholder="Your Message" required 
+                                          class="w-full resize-vertical"></textarea>
+                                <div id="message-error" class="text-red-300 text-sm mt-2 hidden"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn-modern btn-primary w-full">
+                                <span >Send Message</span>
+                            
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp FAB -->
+    <div class="fab-whatsapp" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-in-up">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            DK
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Deepak Kumar</h3>
+                            <p class="text-gray-400">Insurance Professional</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Senior Associate Partner with Kotak Mahindra Life Insurance, dedicated to securing families' financial futures through innovative insurance solutions.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1F79irGSQY/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/deepak.kumar.insan?igsh=djU2MHBvNGFxdTRw" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="fade-in-up">
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#team" class="text-gray-300 hover:text-white transition-colors">Join Team</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in-up">
+                    <h3 class="text-lg font-bold mb-6">Insurance Products</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Term Insurance</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Health Insurance</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Child Plans</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Retirement Plans</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Investment Plans</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in-up">
+                    <h3 class="text-lg font-bold mb-6">Contact Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-phone text-blue-500 mt-1"></i>
+                            <a href="tel:+919812551751" class="text-gray-300 hover:text-white transition-colors">+91 9812551751</a>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-blue-500 mt-1"></i>
+                            <a href="mailto:deepak.kumar@kotaklife.com" class="text-gray-300 hover:text-white transition-colors">deepaklib81@gmail.com</a>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1"></i>
+                            <span class="text-gray-300">Haryana | Punjab | Delhi | Chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2023 Deepak Kumar | Kotak Mahindra Life Insurance. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.modern-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const offsetTop = element.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // WhatsApp function
+        function openWhatsApp() {
+            const phoneNumber = '+919812551751';
+            const message = 'Hello Deepak! I am interested in your insurance services. Please provide more information.';
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        
+       
+         
+        // Real-time form validation
+        ['name', 'email', 'phone', 'interest', 'message'].forEach(fieldId => {
+            const field = document.getElementById(fieldId);
+            field.addEventListener('blur', () => {
+                if (field.value.trim()) {
+                    clearError(fieldId);
+                }
+            });
+        });
+
+        // Stats counter animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number-modern');
+            stats.forEach(stat => {
+                const finalValue = parseInt(stat.textContent.replace('+', ''));
+                let currentValue = 0;
+                const increment = finalValue / 50;
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= finalValue) {
+                        stat.textContent = finalValue + '+';
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(currentValue) + '+';
+                    }
+                }, 50);
+            });
+        }
+
+        // Trigger stats animation when visible
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stat-modern');
+        if (statsSection && statsSection.parentElement) {
+            statsObserver.observe(statsSection.parentElement);
+        }
+
+        // Prevent zoom on mobile input focus
+        document.addEventListener('touchstart', function() {}, true);
+
+        // Add loading class to body when page loads
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
